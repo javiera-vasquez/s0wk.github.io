@@ -1,0 +1,47 @@
+// Basic setting
+@mixin left {@include float-left;}
+@mixin right {@include float-right;}
+@mixin clear {@include clearfix;}
+@mixin none {display: none;}
+
+@mixin bold {font-weight: bold;}
+@mixin normal {font-weight: normal;}
+@mixin light {font-weight: 300;}
+
+.none {@include none;}
+.clear {clear: both;}
+
+// Color variables
+$background: #363e48;
+
+// Reset of foundation and general element of the site
+.top-bar {background-color: transparent;}
+.top-bar-section ul li, .top-bar-section li:not(.has-form) a:not(.button):hover {background-color: transparent;}
+.noise {background-image: url(../images/noise.png);}
+
+// Top bar hack
+.top-bar-section {
+    ul li {
+        a {
+            background-color: red;
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.6);
+            }
+        }
+    }
+}
+
+// Intro
+.intro {
+    h1 {text-align: center;}
+    h3 {
+        text-align: center;
+        // font-weight: 100;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        margin-bottom: 4em;
+    }
+}
+
+.scroll {
+    @include none;
+}
