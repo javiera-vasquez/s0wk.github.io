@@ -3,6 +3,7 @@
 @mixin right {@include float-right;}
 @mixin clear {@include clearfix;}
 @mixin none {display: none;}
+@mixin block {display: block;}
 
 @mixin bold {font-weight: bold;}
 @mixin normal {font-weight: normal;}
@@ -44,4 +45,44 @@ $background: #363e48;
 
 .scroll {
     @include none;
+}
+
+// Loop of work's
+#work {
+    margin-bottom: 4em;
+    .loop {
+        background-color: rgba(255, 255, 255, 1);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        h4 {
+            color: $background;
+            font-size: rem-calc(18);
+            padding: 10px 0 0 15px
+        }
+        &:hover {
+            .overlay {
+                @include block;
+            }
+        }
+        .overlay {
+            @include none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.3);
+            text-align: center;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+            img {margin-top: 2em;}
+            h3 {font-size: rem-calc(20);}
+            ul {
+                margin-left: 0;
+                li {
+                    list-style: none;
+                    line-height: 1.5;
+                    font-size: rem-calc(14);
+                    span {
+                        padding: 7px 10px;
+                        background-color: rgba(0, 0, 0, 0.6);
+                    }
+                }
+            }
+        }
+    }
 }
