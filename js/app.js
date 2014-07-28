@@ -5,10 +5,12 @@ $(document).foundation();
 $( window ).ready(function() {
     $(".overlay").css("width", $(".fixed-img").width());
     $(".overlay").css("height", $(".fixed-img").height());
+    $(".progress-bar li").css("height", $(".progress-bar li").width());
 });
 
 // Resize function for the proyect hover
 $( window ).resize(function() {
     $(".overlay").css("width", $(".fixed-img").width());
     $(".overlay").css("height", $(".fixed-img").height());
+    $(".progress-bar li").css("height", $(".progress-bar li").width());
 });

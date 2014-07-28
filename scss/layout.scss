@@ -13,6 +13,7 @@
 .clear {clear: both;}
 
 // Color variables
+// I need to make a refactoring for rgba colors
 $background: #363e48;
 
 // Reset of foundation and general element of the site
@@ -41,6 +42,7 @@ $background: #363e48;
         text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         margin-bottom: 4em;
     }
+    h4  {margin-bottom: 2em;}
 }
 
 .scroll {
@@ -49,7 +51,7 @@ $background: #363e48;
 
 // Loop of work's
 #work {
-    margin-bottom: 4em;
+    margin-bottom: 3em;
     .loop {
         background-color: rgba(255, 255, 255, 1);
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
@@ -76,10 +78,10 @@ $background: #363e48;
                 margin-left: 0;
                 li {
                     list-style: none;
-                    line-height: 1.5;
+                    line-height: 1.6;
                     font-size: rem-calc(14);
                     span {
-                        padding: 7px 10px;
+                        padding: 5px 8px;
                         background-color: rgba(0, 0, 0, 0.6);
                     }
                 }
@@ -87,3 +89,47 @@ $background: #363e48;
         }
     }
 }
+
+// About
+#about {
+    margin-bottom: 5em;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+    h2 {font-size: rem-calc(24);}
+    p {
+        font-weight: 300;
+        font-size: rem-calc(15);
+    }
+}
+
+// Progress bar
+// I make this module responsive and sassy friendly :), if you wanna user in another proyect.
+
+//The height is auto calculate by jquery check  app.js. And remenber, the total of $bar-width and $bar-margin have to be equal to 100%, in this case 100/8 = 12.5 - 2 = 10.5
+
+// Variables and Colors
+$bar-normal-bg: #23282f;
+$bar-active-bg: #7ac276;
+$bar-radius: 50px;
+$bar-width: 10.5%;
+$bar-margin: 2%;
+
+// Function
+.progress-bar {
+    margin-left: 0;
+    li {
+        float: left;
+        list-style: none;
+        border-radius: $bar-radius;
+        background-color: $bar-normal-bg;
+        margin-left: $bar-margin;
+        width: $bar-width;
+        box-shadow: 0 1px 0 $bar-normal-bg;
+    }
+    .active {
+        background-color: $bar-active-bg;
+        box-shadow: 0 1px 0 darken($bar-normal-bg, 20%);
+    }
+}
+
+
+
