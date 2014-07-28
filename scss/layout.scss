@@ -97,6 +97,7 @@ $background: #363e48;
     h2 {font-size: rem-calc(24);}
     p {
         font-weight: 300;
+        line-height: 1.8;
         font-size: rem-calc(15);
     }
 }
@@ -104,14 +105,14 @@ $background: #363e48;
 // Progress bar
 // I make this module responsive and sassy friendly :), if you wanna user in another proyect.
 
-//The height is auto calculate by jquery check  app.js. And remenber, the total of $bar-width and $bar-margin have to be equal to 100%, in this case 100/8 = 12.5 - 2 = 10.5
+//The height is auto calculate by jquery check  app.js. And remenber, the total of $bar-width and $bar-margin have to be equal to 100%, in this case 100/8 = 12.5 - 5 = 7.5
 
 // Variables and Colors
 $bar-normal-bg: #23282f;
 $bar-active-bg: #7ac276;
 $bar-radius: 50px;
-$bar-width: 10.5%;
-$bar-margin: 2%;
+$bar-width: 7.5%;
+$bar-margin: 5%;
 
 // Function
 .progress-bar {
@@ -131,5 +132,13 @@ $bar-margin: 2%;
     }
 }
 
-
-
+.ability {
+    float: left;
+    width: 40%;
+    p {margin-bottom: 0;}
+}
+.progress-content {
+    float: left;
+    width: 60%;
+    ul {margin-top: 10px}
+}
