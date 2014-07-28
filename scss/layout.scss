@@ -16,6 +16,26 @@
 // I need to make a refactoring for rgba colors
 $background: #363e48;
 
+// Function to make a custom button, don't necessary in this case
+// @mixin basic-button($bg-color:$primary-color, $text-color: $white, $size: 14, $padding: 35) {
+//     background: $bg-color;
+//     color: $text-color;
+//     font-size: rem-calc($size);
+//     box-shadow: inset 0 -2px 0 darken($bg-color, 20%);
+//     padding: rem-calc(11) rem-calc($padding) rem-calc(12);
+//     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+//     &:hover {
+//         background: darken($bg-color, 5%);
+//         box-shadow: inset 0 -2px 0 darken($bg-color, 20%);
+//     }
+// }
+
+@mixin shadow-button {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+    font-weight: 300;
+}
+
 // Reset of foundation and general element of the site
 .top-bar {background-color: transparent;}
 .top-bar-section ul li, .top-bar-section li:not(.has-form) a:not(.button):hover {background-color: transparent;}
@@ -74,6 +94,7 @@ $background: #363e48;
             text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
             img {margin-top: 2em;}
             h3 {font-size: rem-calc(20);}
+            .button {@include shadow-button;}
             ul {
                 margin-left: 0;
                 li {
@@ -98,7 +119,7 @@ $background: #363e48;
     p {
         font-weight: 300;
         line-height: 1.8;
-        font-size: rem-calc(15);
+        // font-size: rem-calc(15);
     }
 }
 
@@ -135,10 +156,41 @@ $bar-margin: 5%;
 .ability {
     float: left;
     width: 40%;
-    p {margin-bottom: 0;}
+    p {
+        margin-bottom: 0;
+        font-size: rem-calc(15);
+    }
 }
 .progress-content {
     float: left;
     width: 60%;
     ul {margin-top: 10px}
+    .progress-bar li {cursor: pointer;;}
 }
+
+//  Contact
+#contact {
+    margin-bottom: 6em;
+    text-align: center;
+    .button {@include shadow-button;}
+    p {
+        font-weight: 300;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
