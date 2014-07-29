@@ -38,7 +38,7 @@ $background: #363e48;
 
 // Reset of foundation and general element of the site
 .top-bar {background-color: transparent;}
-.top-bar-section ul li, .top-bar-section li:not(.has-form) a:not(.button):hover {
+.top-bar-section ul li, .top-bar-section li:not(.has-form) a:not(.button):hover, .top-bar-section li:not(.has-form) a:not(.button) {
     background-color: transparent;
 }
 
@@ -143,6 +143,13 @@ $background: #363e48;
         line-height: 1.8;
         // font-size: rem-calc(15);
     }
+    .quote {
+        margin-top: 1em;
+        color: #969a9f;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+        font-size: rem-calc(13);
+        line-height: 1.4;
+    }
 }
 
 // Progress bar
@@ -206,6 +213,7 @@ $bar-margin: 5%;
 @media only screen and (max-width: 40em) {
     .intro h3 {font-size: rem-calc(18);}
     #work .loop .overlay ul li {display: inline-block;}
+    .top-bar-section li:not(.has-form) a:not(.button) {background-color: transparent;}
 }
 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {

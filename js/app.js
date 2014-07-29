@@ -3,9 +3,6 @@ $(document).foundation();
 
 // Function of the site
 $( window ).ready(function() {
-    $(".overlay").css("width", $(".fixed-img").width());
-    $(".overlay").css("height", $(".fixed-img").height());
-    $(".progress-bar li").css("height", $(".progress-bar li").width());
     $('.progress-bar li').on('click', function(){
         $(this).toggleClass('active')
     });
@@ -24,6 +21,13 @@ $( window ).ready(function() {
       });
     });
 });
+
+// Calculate the height and width proyect hover
+window.onload = function() {
+    $(".overlay").css("width", $(".fixed-img").width());
+    $(".overlay").css("height", $(".fixed-img").height());
+    $(".progress-bar li").css("height", $(".progress-bar li").width());
+};
 
 // Resize function for the proyect hover
 $( window ).resize(function() {
