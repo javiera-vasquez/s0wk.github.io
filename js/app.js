@@ -36,3 +36,16 @@ $( window ).resize(function() {
     $(".progress-bar li").css("height", $(".progress-bar li").width());
 });
 
+// board = 52f3feeb07e6f51c53f7ea4d
+// key = 6e3df77c1f05d93cb5afa32ed468ce98
+// token = 8233ec2524d1c48fcb44ac6c4371289d8e4418b5b64e42837ffb922ad2956eb0
+
+// (function() {
+//   var trelloApi = "https://api.trello.com/1/boards/4eea4ffc91e31d1746000046/url?key=6e3df77c1f05d93cb5afa32ed468ce98&token=8233ec2524d1c48fcb44ac6c4371289d8e4418b5b64e42837ffb922ad2956eb0";
+//   $.getJSON( trelloApi, {
+//     format: "json"
+//   })
+//     .done(function( data ) {
+//         console.log(data);
+//     });
+// })();
