@@ -156,6 +156,7 @@ $background: #363e48;
     width: 212px;
     position: relative;
     overflow: hidden;
+    @include none;
 }
 #slideshow {
     height: 1734px;

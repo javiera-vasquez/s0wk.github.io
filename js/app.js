@@ -29,6 +29,7 @@ window.onload = function() {
     $(".overlay-12, .over-image").css("width", $(".fixed-img-12").width());
     $(".overlay-12, .over-image").css("height", $(".fixed-img-12").height());
     $(".progress-bar li").css("height", $(".progress-bar li").width());
+    $("#iphone").fadeIn(500);
 };
 
 // Resize function for the proyect hover
