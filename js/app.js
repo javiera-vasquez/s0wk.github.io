@@ -26,6 +26,8 @@ $( window ).ready(function() {
 window.onload = function() {
     $(".overlay").css("width", $(".fixed-img").width());
     $(".overlay").css("height", $(".fixed-img").height());
+    $(".overlay-12, .over-image").css("width", $(".fixed-img-12").width());
+    $(".overlay-12, .over-image").css("height", $(".fixed-img-12").height());
     $(".progress-bar li").css("height", $(".progress-bar li").width());
 };
 
@@ -33,6 +35,8 @@ window.onload = function() {
 $( window ).resize(function() {
     $(".overlay").css("width", $(".fixed-img").width());
     $(".overlay").css("height", $(".fixed-img").height());
+    $(".overlay-12, .over-image").css("width", $(".fixed-img-12").width());
+    $(".overlay-12, .over-image").css("height", $(".fixed-img-12").height());
     $(".progress-bar li").css("height", $(".progress-bar li").width());
 });
 

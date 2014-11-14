@@ -12,6 +12,9 @@
 .none {@include none;}
 .clear {clear: both;}
 
+.relative {position: relative;}
+.absolute {position: absolute;}
+
 // Color variables
 // I need to make a refactoring for rgba colors
 $background: #363e48;
@@ -99,14 +102,15 @@ $background: #363e48;
             padding: 10px 0 0 15px
         }
         &:hover {
-            .overlay {
+            .overlay, .overlay-12 {
                 @include block;
             }
         }
-        .overlay {
+        .overlay, .overlay-12 {
             @include none;
+            z-index: 9999;
             position: absolute;
-            background-color: rgba(54, 62, 72, 0.3);
+            background-color: rgba($background, 0.5);
             text-align: center;
             text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
             img {margin-top: 2em;}
@@ -120,7 +124,7 @@ $background: #363e48;
                 margin-left: 0;
                 li {
                     list-style: none;
-                    line-height: 1.7;
+                    line-height: 2.1;
                     font-size: rem-calc(14);
                     span {
                         padding: 5px 8px;
@@ -129,8 +133,57 @@ $background: #363e48;
                 }
             }
         }
+        .overlay-12 {
+            img {
+                margin-top: 15%;
+            }
+        }
+        .static-image {@include none;}
     }
 }
+
+// Responsive scroll
+.over-image {
+    .absolute {
+        right: 4.8%;
+        top: 235px;
+    }
+}
+
+#iphone{
+    z-index: 2;
+    height: 377px;
+    width: 212px;
+    position: relative;
+    overflow: hidden;
+}
+#slideshow {
+    height: 1734px;
+    width: 212px;
+    background: url(../images/scroll.jpg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    // height: 100%;
+    // Transition
+    -moz-transition:  opacity 0.5s ease-out;
+    -o-transition: opacity 0.5s ease-out;
+    -webkit-transition: opacity 0.5s ease-out;
+    -ms-transition: opacity 0.5s ease-out;
+    // Time Animation
+    -webkit-animation: moveSlideshow 50s linear infinite;
+    -moz-animation:    moveSlideshow 50s linear infinite;
+}
+
+@-webkit-keyframes moveSlideshow {
+    0% { top: 0; }
+    100% { top: -1734px; }
+}
+@-moz-keyframes moveSlideshow {
+    0% { top: 0; }
+    100% { top: -1734px; }
+}
+
 
 // About
 #about {
@@ -212,22 +265,18 @@ $bar-margin: 5%;
 // Media Querys
 @media only screen and (max-width: 40em) {
     .intro h3 {font-size: rem-calc(18);}
-    #work .loop .overlay ul li {display: inline-block;}
+    #work .loop .overlay ul li, #work .loop .overlay-12 ul li {display: inline-block;}
     .top-bar-section li:not(.has-form) a:not(.button) {background-color: transparent;}
+    #work .loop .overlay-12 img {margin-top: 1em;}
+    #work .loop .static-image {@include block;}
 }
 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
     #work .loop .overlay ul li {display: inline-block;}
     #work .loop .overlay img {margin-top: 1em;}
+    #work .loop .overlay-12 img {margin-top: 8%;}
+    #work .loop .static-image {@include block;}
 }
-
-
-
-
-
-
-
-
 
 
 
