@@ -2,6 +2,7 @@
 transition-speed = all 0.2s linear
 color-principal = #2eaee5
 color-secundario = #b51818
+color-principal-2 = #1d93bc
 
 @font-face {
   font-family: 'NeoSans';
@@ -45,18 +46,28 @@ body
 .clearfix
 	clear both
 .button
-	background color-principal
+	background color-principal-2
 	border none
 	color #FFF
-	margin-top 0px
+	margin 0 auto
 	display block
 	height 46px
 	text-align center
 	line-height 46px
 	font-size 19px
+	width: 100%
 .button:hover, .button:active
 	color #FFF
 	text-decoration none
+.button:focus {
+	background-color color-principal
+	color #FFF
+	text-decoration none
+}
+.button.contact
+	width: 85%
+.button.history
+	background-color color-principal
 .no-padding-top
 	padding-top 0!important
 .margin-top-30
@@ -512,7 +523,7 @@ div.formulario-mapa
 			display block
 			float right
 			width 48%
-			background color-principal
+			background color-principal-2
 			text-align center
 			line-height 40px
 			color #FFF
@@ -524,6 +535,9 @@ div.formulario-mapa
 				line-height 40px
 				display block
 				margin 0
+				&:focus
+					background color-principal
+					text-decoration none;
 			.detalles-ocultos
 				width 100%
 				display none
@@ -532,6 +546,9 @@ div.formulario-mapa
 					width 100%
 					color #FFF
 					border-top 1px solid #FFF
+					&:focus
+						background color-principal
+						text-decoration none;
 		div.detalles
 			left 0
 		div.llamar-cliente

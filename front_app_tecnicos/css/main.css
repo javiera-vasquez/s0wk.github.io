@@ -57,20 +57,32 @@ body {
   clear: both;
 }
 .button {
-  background: #2eaee5;
+  background: #1d93bc;
   border: none;
   color: #fff;
-  margin-top: 0px;
+  margin: 0 auto;
   display: block;
   height: 46px;
   text-align: center;
   line-height: 46px;
   font-size: 19px;
+  width: 100%;
 }
 .button:hover,
 .button:active {
   color: #fff;
   text-decoration: none;
+}
+.button:focus {
+  background-color: #2eaee5;
+  color: #fff;
+  text-decoration: none;
+}
+.button.contact {
+  width: 85%;
+}
+.button.history {
+  background-color: #2eaee5;
 }
 .no-padding-top {
   padding-top: 0 !important;
@@ -596,7 +608,7 @@ div.formulario-mapa div.actual {
   display: block;
   float: right;
   width: 48%;
-  background: #2eaee5;
+  background: #1d93bc;
   text-align: center;
   line-height: 40px;
   color: #fff;
@@ -610,6 +622,10 @@ div.formulario-mapa div.actual {
   display: block;
   margin: 0;
 }
+.container .buttons-orden div p:focus {
+  background: #2eaee5;
+  text-decoration: none;
+}
 .container .buttons-orden div .detalles-ocultos {
   width: 100%;
   display: none;
@@ -619,6 +635,10 @@ div.formulario-mapa div.actual {
   width: 100%;
   color: #fff;
   border-top: 1px solid #fff;
+}
+.container .buttons-orden div .detalles-ocultos a:focus {
+  background: #2eaee5;
+  text-decoration: none;
 }
 .container .buttons-orden div.detalles {
   left: 0;
