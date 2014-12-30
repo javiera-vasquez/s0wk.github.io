@@ -45,13 +45,27 @@ $('.direccion-servicio').click(function(){
 	$('.oculto',this).slideToggle('fast');
 })
 
+// Doble show map wit scroll
+$('.overlay').addClass('none')
+
 $('.overlay').click(function(){
-    $('.mapa iframe').animate({
+    $('#mapa iframe').animate({
         height: '280px'
     },400 );
-    $('#btn-route').delay(500).show(0)
+    $('.btn-route').delay(500).show(0)
     $('.overlay').delay(1000).hide(0)
+    $('.overlay').removeClass('none')
 })
+
+if ($('.overlay').hasClass('none')) {
+    $('.ver-mapa').click(function(){
+        $('#mapa iframe').animate({
+            height: '280px'
+        },400 );
+        $('.btn-route').delay(500).show(0)
+        $('.overlay').delay(1000).hide(0)
+    })
+}
 
 /* Fix Height */
 
