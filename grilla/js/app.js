@@ -111,10 +111,16 @@ tabsTrigger.on('click', function() {
             scroll();
             // Enable disable tags
             $("#tagsChannel li").addClass("disable");
+        } else if(tabsId == 'todos') {
+            $(".loopOfChannel .air").addClass("active");
+            $("#tagsChannel li").removeClass("disable");
+            // Scroll animation
+            scroll();
         };
     };
     // return to base
     event.preventDefault();
+    event.returnValue = false;
 })
 
 // Show tags
@@ -158,6 +164,7 @@ tagsTrigger.on('click', function() {
     };
     // return to base
     event.preventDefault();
+    event.returnValue = false;
 })
 
 // Trigger to launch modal's
