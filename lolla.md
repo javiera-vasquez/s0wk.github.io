@@ -1,6 +1,8 @@
-#Lolla 2015
+##Lolla 2015
+Listado de funcionalidades y tareas que deberia ser capaz de realizar el nuevo sitio de Lollapalooza 2015
 
-## ¿Que deberia hacer el sitio?
+
+### ¿Que deberia hacer el sitio?
 
 1. Poder hacer streaming en vivo de dos canales de video
 	* Desplegar que esta sonando en cada uno de los respectivos canales // ej. canal 1 "The national" - canal 2 "Arcade fire"
@@ -17,7 +19,8 @@
 
 5. Entregar metricas de uso por definir
 
-## ¿Para eso necesitamos?
+
+### ¿Para eso necesitamos?
 
 * Crear una app que se pueda comunicar asyncronicamente con el CDN (a travez de JSON)
 * Que los estaticos se sirvan solo una vez y que las actualizaciones al sitio sean de forma dinamica
