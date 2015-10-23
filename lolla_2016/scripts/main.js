@@ -1,0 +1,1 @@
+$(document).ready(function(){Modernizr.testAllProps("pointerEvents")||$("html").addClass("pointerEvents")}),$(window).load(function(){$("figure").each(function(){$(this).css("height",$("figure").height())})});
