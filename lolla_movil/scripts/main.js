@@ -1,0 +1,1 @@
+"use strict";!function(){function t(t){$("#viewportSize").css("height",e),$("#content").css("height",e-n-t),$("#content .text").css("padding-top",Math.floor((e-2*n-t)/3))}var e=$(window).height(),i=$("#viewportSize").height(),n=$("#content").height();e>i&&600>e&&t(25),e>i&&e>600&&t(100)}();
