@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'NeoSansStdRegular';
+    src: url('../fonts/neosansstd-regular.eot');
+    src: url('../fonts/neosansstd-regular.eot') format('embedded-opentype'),
+         url('../fonts/neosansstd-regular.woff') format('woff'),
+         url('../fonts/neosansstd-regular.ttf') format('truetype'),
+         url('../fonts/neosansstd-regular.svg#NeoSansStdRegular') format('svg');
+}

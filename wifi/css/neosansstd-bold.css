@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'NeoSansStdBold';
+    src: url('../fonts/neosansstd-bold.eot');
+    src: url('../fonts/neosansstd-bold.eot') format('embedded-opentype'),
+         url('../fonts/neosansstd-bold.woff') format('woff'),
+         url('../fonts/neosansstd-bold.ttf') format('truetype'),
+         url('../fonts/neosansstd-bold.svg#NeoSansStdBold') format('svg');
+}
